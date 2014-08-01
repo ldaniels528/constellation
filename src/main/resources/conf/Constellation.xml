@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<ConstellationConfig>
+	<FrameSize width='1440' height='874' />
+	<ColorPreferences background='255,255,240' phantom='128,160,128' grid='192,192,192' highlighted='255,200,0' picked='112,112,255' temporary='255,0,255' />
+	<VisibilityPreferences comments='true' grids='true' highlights='true' phantoms='true' pointLabels='false' />
+	<ThirdPartyModule type='FORMAT_READER' class='constellation.thirdparty.formats.iges.IGESFileReader' enabled='true' />
+	<ThirdPartyModule type='FORMAT_READER' class='constellation.thirdparty.formats.vsd.VSDFileReader' enabled='true' />
+	<ThirdPartyModule type='MENU_ITEM' class='constellation.tools.pdm.client.PDMMenu' enabled='true' />
+	<ThirdPartyModule type='MENU_ITEM' class='constellation.tools.collaboration.CollaborationMenu' enabled='true' />
+	<ThirdPartyModule type='MENU_ITEM' class='constellation.tools.demopro.DemoProMenuItem' enabled='true' />
+	<ThirdPartyModule type='MENU_ITEM' class='constellation.tools.weather.WeatherForecastMenuItem' enabled='true' />
+</ConstellationConfig>

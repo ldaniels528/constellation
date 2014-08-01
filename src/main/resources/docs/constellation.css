@@ -1,0 +1,45 @@
+body { background-color: #f0f0ff }
+h1 { color: #0000ff; font-size: 24; text-align: center }
+h2 { color: #000000; font-size: 21; text-align: left }
+
+img.construction { float:center }
+img.logo { float:right }
+img.std { float: right }
+
+div.std { color: #000000; font-size: 18 }
+
+li.std { color: #000000; font-size: 18 }
+
+span.bold { color: #000000; font-size: 18; font-weight: bold }
+span.blue { color: #0000ff; font-size: 18 }
+span.red { color: #ff0000; font-size: 18 }
+span.std { color: #000000; font-size: 18 }
+
+table.dialog {
+	width: 90%
+}
+
+table.steps {
+	background-color: #EEEEEE;
+	border-width: 1;
+	width: 90%
+}
+
+td.std { 
+	vertical-align: text-top;
+	color: #000000; 
+	font-size: 18 
+}
+
+ul {
+	list-style-type:none;
+	padding:0px;
+	margin:0px;
+}
+
+ol {
+	font-size: 18
+}
+
+p.error { color: #ff0000; font-size: 18; text-align: left } 
+p.std { color: #000000; font-size: 18 }

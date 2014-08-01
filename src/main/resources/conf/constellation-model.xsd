@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Root Element -->
+	<xsd:element name="Model" type="ModelType" />
+
+  	<!-- Model Type -->
+  	<xsd:complexType name="ModelType">
+  	    <xsd:sequence>
+    		<xsd:element name="AuthorName" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="OrganizationName" type="xsd:string" minOccurs="1" maxOccurs="1" />
+    		<xsd:element name="ModelDescription" type="xsd:string" minOccurs="1" maxOccurs="1" />
+      		<xsd:element name="Geometry" type="GeometryType" minOccurs="1" maxOccurs="1" />
+      		<xsd:element name="UserImages" type="UserImagesType" minOccurs="0" maxOccurs="1" />
+    	</xsd:sequence>
+  	    <xsd:attribute name="defaultColor" type="xsd:unsignedShort" use="required" />
+    	<xsd:attribute name="defaultPattern" type="xsd:unsignedShort" use="required" />
+    	<xsd:attribute name="draftingStandard" type="xsd:unsignedShort" use="required" />
+    	<xsd:attribute name="scale" type="xsd:double" use="required" />
+    	<xsd:attribute name="unit" type="xsd:unsignedShort" use="required" />
+ 	</xsd:complexType>
+ 	
+ 	 <!-- Geometry Type -->
+  	<xsd:complexType name="GeometryType">
+    	<xsd:sequence>
+      		<xsd:element name="Arc" type="ArcType" minOccurs="0" maxOccurs="unbounded" />
+      		<xsd:element name="Circle" type="CircleType" minOccurs="0" maxOccurs="unbounded" />
+      		<xsd:element name="Ellipse" type="EllipseType" minOccurs="0" maxOccurs="unbounded" />
+      		<xsd:element name="Line" type="LineType" minOccurs="0" maxOccurs="unbounded" />
+      		<xsd:element name="Note" type="NoteType" minOccurs="0" maxOccurs="unbounded" />
+      		<xsd:element name="Picture" type="PictureType" minOccurs="0" maxOccurs="unbounded" />
+      		<xsd:element name="Point" type="PointType" minOccurs="0" maxOccurs="unbounded" />
+      		<xsd:element name="Spline" type="SplineType" minOccurs="0" maxOccurs="unbounded" />
+    	</xsd:sequence>
+ 	</xsd:complexType>
+
+	<!-- Circular Arc Type -->
+  	<xsd:complexType name="ArcType">
+    	<xsd:attribute name="label" type="xsd:string" use="required" />
+    	<xsd:attribute name="x" type="xsd:double" use="required" />
+    	<xsd:attribute name="y" type="xsd:double" use="required" />
+    	<xsd:attribute name="radius" type="xsd:double" use="required" />
+    	<xsd:attribute name="startAngle" type="xsd:double" use="required" />
+    	<xsd:attribute name="endAngle" type="xsd:double" use="required" />
+    	<xsd:attribute name="color" type="xsd:unsignedShort" use="required" />
+    	<xsd:attribute name="pattern" type="xsd:unsignedShort" use="required" />
+ 	</xsd:complexType>
+
+	<!-- Circle Type -->
+  	<xsd:complexType name="CircleType">
+    	<xsd:attribute name="label" type="xsd:string" use="required" />
+    	<xsd:attribute name="x" type="xsd:double" use="required" />
+    	<xsd:attribute name="y" type="xsd:double" use="required" />
+    	<xsd:attribute name="radius" type="xsd:double" use="required" />
+    	<xsd:attribute name="color" type="xsd:unsignedShort" use="required" />
+    	<xsd:attribute name="pattern" type="xsd:unsignedShort" use="required" />
+ 	</xsd:complexType>
+ 	
+ 	<!-- Ellipse Type -->
+  	<xsd:complexType name="EllipseType">
+    	<xsd:attribute name="label" type="xsd:string" use="required" />
+    	<xsd:attribute name="x" type="xsd:double" use="required" />
+    	<xsd:attribute name="y" type="xsd:double" use="required" />
+    	<xsd:attribute name="width" type="xsd:double" use="required" />
+    	<xsd:attribute name="height" type="xsd:double" use="required" />
+    	<xsd:attribute name="color" type="xsd:unsignedShort" use="required" />
+    	<xsd:attribute name="pattern" type="xsd:unsignedShort" use="required" />
+ 	</xsd:complexType> 	
+ 	
+ 	<!-- Line Type -->
+  	<xsd:complexType name="LineType">
+    	<xsd:attribute name="label" type="xsd:string" use="required" />
+    	<xsd:attribute name="x1" type="xsd:double" use="required" />
+    	<xsd:attribute name="y1" type="xsd:double" use="required" />
+    	<xsd:attribute name="x2" type="xsd:double" use="required" />
+    	<xsd:attribute name="y2" type="xsd:double" use="required" />
+    	<xsd:attribute name="color" type="xsd:unsignedShort" use="required" />
+    	<xsd:attribute name="pattern" type="xsd:unsignedShort" use="required" />
+ 	</xsd:complexType>	
+ 	
+  	 <!-- Note Type -->
+  	<xsd:complexType name="NoteType">
+  		<xsd:sequence>
+      		<xsd:element name="NoteText" type="xsd:string" minOccurs="1" maxOccurs="1" />
+      	</xsd:sequence>      	
+    	<xsd:attribute name="label" type="xsd:string" use="required" />
+    	<xsd:attribute name="x" type="xsd:double" use="required" />
+    	<xsd:attribute name="y" type="xsd:double" use="required" />
+    	<xsd:attribute name="color" type="xsd:unsignedShort" use="required" />	
+ 	</xsd:complexType>
+  	
+  	<!-- Picture Type -->
+  	<xsd:complexType name="PictureType">
+    	<xsd:attribute name="label" type="xsd:string" use="required" />
+    	<xsd:attribute name="x" type="xsd:double" use="required" />
+    	<xsd:attribute name="y" type="xsd:double" use="required" />
+    	<xsd:attribute name="imageName" type="xsd:string" use="required" />
+ 	</xsd:complexType>	
+ 	
+ 	 <!-- Point Type -->
+  	<xsd:complexType name="PointType">
+    	<xsd:attribute name="label" type="xsd:string" use="required" />
+    	<xsd:attribute name="x" type="xsd:double" use="required" />
+    	<xsd:attribute name="y" type="xsd:double" use="required" />
+    	<xsd:attribute name="color" type="xsd:unsignedShort" use="required" />
+ 	</xsd:complexType>	
+ 	
+ 	 <!-- Spline Type -->
+  	<xsd:complexType name="SplineType">
+  	  	<xsd:sequence>
+      		<xsd:element name="vertex" type="VertexType" minOccurs="2" maxOccurs="unbounded" />
+      	</xsd:sequence> 
+    	<xsd:attribute name="label" type="xsd:string" use="required" />
+    	<xsd:attribute name="color" type="xsd:unsignedShort" use="required" />
+    	<xsd:attribute name="pattern" type="xsd:unsignedShort" use="required" />   	
+ 	</xsd:complexType>	
+ 	
+  	<!-- User Image Type -->
+  	<xsd:complexType name="UserImageType">
+  	  	<xsd:sequence>
+      		<xsd:element name="content" type="xsd:base64Binary" minOccurs="1" maxOccurs="1" />
+      	</xsd:sequence>
+  		<xsd:attribute name="label" type="xsd:string" use="required" />
+ 	</xsd:complexType>	
+ 	
+ 	 <!-- User Images Type -->
+  	<xsd:complexType name="UserImagesType">
+    	<xsd:sequence>
+      		<xsd:element name="UserImage" type="UserImageType" minOccurs="0" maxOccurs="unbounded" />
+      	</xsd:sequence>
+ 	</xsd:complexType>	
+  
+   	<!-- Vertex Type -->
+  	<xsd:complexType name="VertexType">
+    	<xsd:attribute name="x" type="xsd:double" use="required" />
+    	<xsd:attribute name="y" type="xsd:double" use="required" />
+    </xsd:complexType>
+  
+</xsd:schema>

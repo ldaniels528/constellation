@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+	<!-- Root Element -->
+	<xsd:element name="Constellation" type="ConstellationType" />
+
+  	<!-- Constellation Type -->
+  	<xsd:complexType name="ConstellationType">
+    	<xsd:sequence>
+      		<xsd:element name="ToolList" type="ToolListType" minOccurs="1" maxOccurs="1" />
+    	</xsd:sequence>
+ 	</xsd:complexType>
+
+	<!-- Function Type -->
+  	<xsd:complexType name="FunctionType">
+    	<xsd:attribute name="name" type="xsd:string" use="required" />
+    	<xsd:attribute name="classname" type="xsd:string" use="required" />
+ 	</xsd:complexType>
+ 	
+	<!-- Model Reader Type -->
+  	<xsd:complexType name="ModelReaderType">
+    	<xsd:attribute name="classname" type="xsd:string" use="required" />
+ 	</xsd:complexType> 
+
+ 	<!-- Tool List Type -->
+ 	<xsd:complexType name="ToolListType">
+ 		<xsd:sequence>
+    		<xsd:element name="ModelReader" type="ModelReaderType" minOccurs="0" maxOccurs="unbounded" />
+    	</xsd:sequence>    		
+ 	</xsd:complexType>
+ 	
+</xsd:schema>
