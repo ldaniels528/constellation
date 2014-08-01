@@ -10,8 +10,8 @@ To create a state of the art 2D drawing package in 100% pure Java (Java2D and Sw
 
 * Advanced geometry: lines, circles, ellipses, and Bezier curves
 * Collaboration
-** Concurrent Design - the ability to concurrent create/update models (joint session)
-** Remote Assistance - the ability to remotely control a user's session
+** The Concurrent Design module enables users to concurrently create/update models (joint session)
+** The Remote Assistance module enables users to remotely control a user's session
 * Customization
 ** A scripting language which can be used to create user commands and functions
 ** A Java-based API will be exposed to create new types of geometric elements and functions.
