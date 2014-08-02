@@ -19,7 +19,25 @@ To create a state of the art 2D drawing package in 100% pure Java (Java2D and Sw
 1. Integrated Help & Online Documentation
 1. IGES format import
 
+### Upcoming Features
+
+1. Versioning System
+	* Retain revisions of models for restoration based on version number or date
+	* Support customized curves through the evaluation of user defined functions.
+
 ### Build Requirements
 
 * Java 1.7+
-* Maven 3.0.x
+* Maven 3.0+
+
+### Building the code
+
+    $ mvn clean package
+      
+### Running the tests
+
+    $ mvn test   
+
+### Run the application
+
+	$ java -jar constellation.jar
