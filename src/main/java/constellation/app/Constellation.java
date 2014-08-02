@@ -16,7 +16,7 @@ import constellation.preferences.SystemPreferences;
  * Constellation Advanced Drawing Package
  * @author lawrence.daniels@gmail.com
  */
-@CxVersion("0.49RC4")
+@CxVersion("0.50")
 public class Constellation {
 	private static final Logger logger = Logger.getLogger( Constellation.class );
 	private final SystemPreferences systemPreferences;

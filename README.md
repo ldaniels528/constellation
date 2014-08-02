@@ -40,4 +40,4 @@ To create a state of the art 2D drawing package in 100% pure Java (Java2D and Sw
 
 ### Run the application
 
-	$ java -jar constellation.jar
+	$ java -jar constellation-0.50-jar-with-dependencies.jar
