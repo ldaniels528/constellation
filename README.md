@@ -27,8 +27,8 @@ To create a state of the art 2D drawing package in 100% pure Java (Java2D and Sw
 
 ### Build Requirements
 
-* Java 1.7+
-* Maven 3.0+
+* JDK 11+
+* Maven 3.9+
 
 ### Building the code
 
@@ -41,3 +41,7 @@ To create a state of the art 2D drawing package in 100% pure Java (Java2D and Sw
 ### Run the application
 
 	$ java -jar constellation-0.50-jar-with-dependencies.jar
+
+### Screenshot
+
+![Screenshot](https://github.com/ldaniels528/constellation/blob/main/constellation.png)
